@@ -28,7 +28,7 @@ export default async (request: NextApiRequest, response: NextApiResponse)=>{
       )
     )
 
-    let customerId = user.data.stripe_customer_id.id
+    let customerId = user.data.stripe_customer_id?.id ?? null
 
     if (!customerId) {
       const stripeCustomer = await stripe.customers.create({
