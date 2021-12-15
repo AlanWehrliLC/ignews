@@ -106,3 +106,7 @@ dist
 # Environment variables
 
 .env.local
+
+# Report of what remains to be tested
+
+coverage

@@ -13,7 +13,7 @@ export function ActiveLink({children, activeClassName, ...rest}: ActiveLinkProps
   const className = asPath === rest.href ? activeClassName : ''
 
   return(
-    <Link {...rest}>
+    <Link {...rest} prefetch={false}>
       {cloneElement(children, {
         className
       })}
